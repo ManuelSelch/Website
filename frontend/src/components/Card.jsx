@@ -64,16 +64,24 @@ function CardImageOverlay({name, description, img}) {
             alt={name}
             className="object-cover aspect-auto w-full"
           />
-         
-          <figcaption className="bg-red h-full opacity-100 hover:opacity-100 absolute bottom-0 left-0 w-full p-6 text-white">
-              <div className="w-full flex bg-black/50">
-                <div className="self-end">
-                  <h3 className="display-inline align-bottom text-lg font-medium ">{name}</h3>
-                  <p className="text-sm opacity-75">{description}</p>
+          <motion.div
+            className="absolute w-full h-[100vh] bg-black/50"
+              initial={{ bottom: -100, opacity: 0 }}
+              whileHover={{
+                bottom: 0,
+                opacity: 1,
+                transition: { duration: 0.2 }
+              }}
+          >
+            <figcaption className="absolute bottom-0 w-full h-full">
+                <div className="flex items-end h-full">
+                  <div className="bg-white w-full p-5">
+                    <h2><strong>{name}</strong></h2>
+                    <h2>{description}</h2>
+                  </div>
                 </div>
-              </div>
-           
-          </figcaption>
+            </figcaption>
+          </motion.div>
         </figure>
       </div>
       {/*<!-- End Image overlay card --> */}
