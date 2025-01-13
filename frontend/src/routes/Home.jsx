@@ -23,9 +23,9 @@ export default function Home() {
           style= {{ 
             background: 'black' // theme.backgroundDark
           }}
-          className='h-[100vh] flex items-center p-10'
+          className='h-[100vh] flex  p-10'
         >
-          <div className='basis-2/3 bottom-0 text-white'>
+          <div className='content-end basis-2/3 bottom-0 text-white'>
             <p className='text-7xl'>Ich bin</p>
             <p 
               className='text-9xl'
@@ -36,9 +36,9 @@ export default function Home() {
               </p>
           </div>
           
-          <div className="basis-1/3 relative">
+          <div className="content-end basis-1/3 relative">
             <img
-              className="object-fit h-full"
+              className="object-fit"
               src={`${process.env.REACT_APP_BACKEND}/assets/link/${home.hero.image._id}`}
               alt=""
             />
