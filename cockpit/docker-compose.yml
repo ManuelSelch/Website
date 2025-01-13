@@ -1,0 +1,20 @@
+networks:
+  proxynet:
+      name: proxynet
+      external: true
+
+volumes:
+  spaces:
+  storage:
+
+services:
+  cockpit:
+    image: cockpithq/cockpit:core-latest
+    container_name: cockpit
+    networks:
+     - proxynet
+    volumes:
+     - spaces:/var/www/html/.spaces
+     - storage:/var/www/html/storage
+     - ./data/config:/var/www/html/config
+     - ./data/addons:/var/www/html/addons
