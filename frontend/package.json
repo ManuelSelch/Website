@@ -17,7 +17,7 @@
     "scripts": {
       "start": "react-scripts start",
       "build": "react-scripts build",
-      "deploy": "pm2 start ./server.sh --name manuel-frontend"
+      "deploy": "pm2 start ./run.sh --name manuel-frontend"
     },
     "eslintConfig": {
       "extends": [
