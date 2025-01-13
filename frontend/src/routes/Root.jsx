@@ -17,13 +17,13 @@ export default function Root({ children }) {
     return (
       <div 
         style= {{ 
-          backgroundColor: theme.backgroundColor,
-          color: theme.textColor
+          backgroundColor: theme.background,
+          color: theme.text
         }}
       >
         <ScrollToTop />
           <Header />
-            <main className="min-h-[100vh] px-8 py-8">
+            <main className="min-h-[100vh]">
             {children ?? <Outlet />}
             </main>
           <Footer />
